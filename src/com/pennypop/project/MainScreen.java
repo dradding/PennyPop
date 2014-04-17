@@ -2,7 +2,9 @@ package com.pennypop.project;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 
 /**
@@ -14,10 +16,14 @@ public class MainScreen implements Screen {
 	
 	private final Stage stage;
 	private final SpriteBatch spriteBatch;
+	private final BitmapFont font;
 	
 	public MainScreen() {
 		spriteBatch = new SpriteBatch();
 		stage = new Stage(Gdx.graphics.getWidth(), Gdx.graphics.getHeight(), false, spriteBatch);
+		font = new BitmapFont(Gdx.files.internal("assets/font.fnt"),
+		         Gdx.files.internal("assets/font.png"), false);
+		
 	}
 
 	@Override
@@ -30,6 +36,11 @@ public class MainScreen implements Screen {
 	public void render(float delta) {
 		stage.act(delta);
 		stage.draw();
+		spriteBatch.begin();
+		font.setColor(Color.RED);
+		font.draw(spriteBatch, "PennyPop", 640 - font.getBounds("PennpyPop").width/2, 
+				360 + font.getBounds("PennyPop").height/2);
+		spriteBatch.end();
 	}
 
 	@Override
@@ -56,5 +67,6 @@ public class MainScreen implements Screen {
 	public void resume() {
 		// Irrelevant on desktop, ignore this
 	}
+	
 
 }
