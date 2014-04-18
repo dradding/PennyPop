@@ -1,0 +1,47 @@
+
+PPButtons.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+font
+  rotate: false
+  xy: 1, 205
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+apiButton
+  rotate: false
+  xy: 1, 103
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+gameButton
+  rotate: false
+  xy: 515, 617
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+sfxButton
+  rotate: false
+  xy: 1, 1
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+yellow
+  rotate: false
+  xy: 103, 139
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+red
+  rotate: false
+  xy: 515, 551
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
